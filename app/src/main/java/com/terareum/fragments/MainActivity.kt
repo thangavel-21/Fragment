@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun bottomTabNavigation() {
-        binding.bottomNav.setOnItemSelectedListener{
-            when (it.itemId) {
+        binding.bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
                 R.id.action_home -> {
                     replace(FragmentOne())
                     true
@@ -27,12 +27,16 @@ class MainActivity : AppCompatActivity() {
                     replace(FragmentTwo())
                     true
                 }
-                else -> {true}
+                else -> {
+                    true
+                }
             }
         }
     }
 
     private fun replace(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.frame_layout, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }
