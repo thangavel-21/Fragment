@@ -18,4 +18,15 @@ class FragmentTwo : Fragment() {
         binding = FragmentTwoBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.click.setOnClickListener {
+         val bundle = Bundle()
+            bundle.putString("key1","check")
+            val frag = FragmentOne()
+            frag.arguments = bundle
+            parentFragmentManager.beginTransaction().replace(R.id.frame_layout, frag).commit()
+        }
+    }
 }
