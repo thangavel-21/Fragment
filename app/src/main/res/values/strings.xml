@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fragments</string>
-    <string name="home">Home</string>
-    <string name="more">More</string>
+    <string name="app_name">Salvar</string>
+    <string name="notes">Notes</string>
+    <string name="recorder">Recorder</string>
 </resources>
