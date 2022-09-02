@@ -2,4 +2,10 @@
     <string name="app_name">Salvar</string>
     <string name="notes">Notes</string>
     <string name="recorder">Recorder</string>
+    <string name="edit">Edit</string>
+    <string name="floating_button">floating_button</string>
+    <string name="current_date">floating_button</string>
+    <string name="time_format">%1s  %1d</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="title">Title</string>
 </resources>

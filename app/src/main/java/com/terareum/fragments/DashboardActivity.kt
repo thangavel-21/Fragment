@@ -8,7 +8,7 @@ import com.terareum.fragments.Fragments.RecorderFragment
 import com.terareum.fragments.databinding.ActivityMainBinding
 
 class DashboardActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -18,6 +18,12 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun bottomTabNavigation() {
+        if (false) {
+            binding.bottomNav.inflateMenu(R.menu.rtl_bottomtab)
+            binding.bottomNav.selectedItemId = R.id.action_home
+        } else {
+            binding.bottomNav.inflateMenu(R.menu.bottom_tab_navigation)
+        }
         binding.bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_home -> {
